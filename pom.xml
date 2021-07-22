@@ -18,10 +18,16 @@
     <properties>
         <spring.boot-version>2.3.4.RELEASE</spring.boot-version>
         <spring.cloud-version>Hoxton.SR8</spring.cloud-version>
+        <netty.version>4.1.45.Final</netty.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>

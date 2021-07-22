@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e9cdf4-a937-4c5e-8adc-585c1cc6a1ea" name="Default Changelist" comment="feat: create new project.">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+    <list default="true" id="18e9cdf4-a937-4c5e-8adc-585c1cc6a1ea" name="Default Changelist" comment="refactor(all): modify xml indent from 2 spaces to 4 spaces.">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_45_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-test-first/src/main/java/cn/xuxiaofeng/it/configure/EchoServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-test-first/src/main/java/cn/xuxiaofeng/it/service/EchoServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-test-second/src/main/java/configure/EchoClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netty-test-second/src/main/java/service/EchoClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty-test-first/netty-test-first.iml" beforeDir="false" afterPath="$PROJECT_DIR$/netty-test-first/netty-test-first.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/netty-test-first/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/netty-test-first/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty-test-second/netty-test-second.iml" beforeDir="false" afterPath="$PROJECT_DIR$/netty-test-second/netty-test-second.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/netty-test-second/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/netty-test-second/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -59,13 +66,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/netty-test-second" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/netty-test-second/src/main/java" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -74,14 +85,27 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\develop\Workspaces\my-test\netty-test\netty-test-second\src\main\java" />
       <recent name="C:\develop\Workspaces\my-test\netty-test\netty-test-second\src\main\resources" />
       <recent name="C:\develop\Workspaces\my-test\netty-test\netty-test-first" />
       <recent name="C:\develop\Workspaces\my-test\netty-test\netty-test-second" />
       <recent name="C:\develop\Workspaces\my-test\netty-test\netty-test-first\src" />
-      <recent name="C:\develop\Workspaces\my-test\netty-test" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.EchoClient">
+    <configuration name="EchoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="service.EchoClient" />
+      <module name="netty-test-second" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -110,6 +134,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EchoClient" />
         <item itemvalue="Spring Boot.FirstMainApplication" />
       </list>
     </recent_temporary>
@@ -125,7 +150,7 @@
       <workItem from="1626781629282" duration="294000" />
       <workItem from="1626782091153" duration="24000" />
       <workItem from="1626782301697" duration="4689000" />
-      <workItem from="1626832514698" duration="6758000" />
+      <workItem from="1626832514698" duration="18057000" />
     </task>
     <task id="LOCAL-00001" summary="feat: create new project.">
       <created>1626831189466</created>
@@ -148,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626835728359</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor(all): modify xml indent from 2 spaces to 4 spaces.">
+      <created>1626845805349</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1626845805349</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +200,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: create new project." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: create new project." />
+    <MESSAGE value="refactor(all): modify xml indent from 2 spaces to 4 spaces." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(all): modify xml indent from 2 spaces to 4 spaces." />
   </component>
 </project>
