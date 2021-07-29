@@ -1,4 +1,4 @@
-package configure;
+package cn.xuxiaofeng.it.configure;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

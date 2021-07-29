@@ -14,7 +14,7 @@
     <bytecodeTargetLevel>
       <module name="netty-test" target="1.5" />
       <module name="netty-test (1)" target="1.5" />
-      <module name="netty-test-first" target="8" />
+      <module name="netty-test-first" target="1.8" />
       <module name="netty-test-second" target="8" />
       <module name="spring-cloud-test" target="8" />
     </bytecodeTargetLevel>

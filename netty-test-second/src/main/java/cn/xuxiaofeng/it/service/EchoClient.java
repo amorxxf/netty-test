@@ -1,6 +1,6 @@
-package service;
+package cn.xuxiaofeng.it.service;
 
-import configure.EchoClientHandler;
+import cn.xuxiaofeng.it.configure.EchoClientHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
