@@ -1,27 +1,43 @@
 server:
   port: 7001
-
+# spring配置
 spring:
   application:
     name: netty-test-first
   profiles:
     active: dev # 当前环境: 开发
-  cloud:
-    nacos:
-      discovery:
-        enabled: true
-        server-addr: 127:0:0:1:8848 # 注册入的nacos服务地址
-      config: # ${prefix}-${spring.profile.active}.${file-extension}
-        server-addr: 127:0:0:1:8848 # 从nacos配置中心拉取
-        group: default # 配置所在的组
-        namespace: public # 配置所在的命名空间
-        file-extension: yaml # 配置的后缀
-        prefix: ${spring.application.name}
-    sentinel:
-      transport:
-        port: 8858
-        dashboard: http://127.0.0.1:8858
-
+  datasource:
+    druid: # 连接池配置
+      initial-size: 0 # 初始化连接数大小
+#      min-idle=3 # 最小连接数
+#      max-active=10 # 最大连接数
+#      max-wait=60000 # 连接超时时间
+    type: com.alibaba.druid.pool.DruidDataSource # 连接池类型
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mydb?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: xxf19971101
+# 分布式配置
+#  cloud:
+#    # 配置中心
+#    nacos:
+#      # 服务注册
+#      discovery:
+#        enabled: true
+#        server-addr: 127:0:0:1:8848 # 注册入的nacos服务地址
+#      # 服务发现
+#      config: # ${prefix}-${spring.profile.active}.${file-extension}
+#        server-addr: 127:0:0:1:8848 # 从nacos配置中心拉取
+#        group: default # 配置所在的组
+#        namespace: public # 配置所在的命名空间
+#        file-extension: yaml # 配置的后缀
+#        prefix: ${spring.application.name}
+#    # 熔断限流
+#    sentinel:
+#      transport:
+#        port: 8858
+#        dashboard: http://127.0.0.1:8858
+#    网关
 #    gateway:
 #      discovery:
 #        locator:
@@ -32,3 +48,13 @@ spring:
 #          uri: lb://NETTY-TEST-FIRST # 匹配后提供服务的路由地址
 #          predicates:
 #            - Path=/payment/get/** # 断言，路径相匹配的进行路由
+
+# 整合mybatis
+mybatis:
+#  type-aliases-package: com.example.domain.model
+#  type-handlers-package: com.example.typehandler
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 30

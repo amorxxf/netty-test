@@ -7,6 +7,7 @@ import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.CharsetUtil;
+import io.netty.util.ReferenceCountUtil;
 
 /**
  * @ClassName: EchoServerHandler
@@ -28,6 +29,7 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
                 "Server received: " + in.toString(CharsetUtil.UTF_8));
         // 将接收到的消息写给发送者，而不冲刷出站消息
         ctx.write(in);
+        ReferenceCountUtil.release(msg);  // 丢弃接收的消息
     }
 
     /**

@@ -21,6 +21,9 @@
         <netty.version>4.1.45.Final</netty.version>
         <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
         <lombok.version>1.18.12</lombok.version>
+        <hutool.version>5.7.7</hutool.version>
+        <mybatis.version>2.1.0</mybatis.version>
+        <mysql.version>8.0.18</mysql.version>
     </properties>
 
     <dependencyManagement>
@@ -30,6 +33,8 @@
                 <artifactId>netty-all</artifactId>
                 <version>${netty.version}</version>
             </dependency>
+
+            <!-- springboot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -37,6 +42,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- springCloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -44,6 +51,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- springCloudAlibaba -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
@@ -51,11 +60,34 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
+
+            <!-- 糊涂工具包 -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!-- mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <!-- mysql -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
