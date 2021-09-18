@@ -1,5 +1,6 @@
 package cn.xuxiaofeng.it.contorller;
 
+import cn.xuxiaofeng.it.annotation.ExecuteTime;
 import cn.xuxiaofeng.it.common.CommRes;
 import cn.xuxiaofeng.it.service.MyTestService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,7 @@ public class TestController {
     @Resource
     private MyTestService myTestService;
 
+    @ExecuteTime
     @GetMapping("/find")
     public CommRes<List<Map<String, Object>>> findUserList() {
         List<Map<String, Object>> list = myTestService.findUserList();
